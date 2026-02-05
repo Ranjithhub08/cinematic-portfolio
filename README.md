@@ -5,7 +5,7 @@
 ## 🌌 Overview
 This is not just a portfolio; it's a visual manifesto. Designed to break the mold of traditional 2D resume sites, this project uses a cinematic, "sci-fi" aesthetic to showcase technical skills in DevOps, Cloud Computing, and Automation.
 
-**Live Demo:** [Link to your Vercel/Netlify deployment here]
+**Live Demo:** [https://Ranjithhub08.github.io/cinematic-portfolio/](https://Ranjithhub08.github.io/cinematic-portfolio/)
 
 ## ✨ Key Features
 -   **Immersive 3D Environment**: A deep-space void with atmospheric fog, moving stars, and floating particles.
