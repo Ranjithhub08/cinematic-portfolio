@@ -374,7 +374,7 @@ export default function App() {
       <Canvas
         dpr={[1, 2]}
         camera={{ position: [0, 0, 5], fov: 45 }}
-        gl={{ antialias: false, toneMapping: THREE.ExponentToneMapping, toneMappingExposure: 1.5 }}
+        gl={{ antialias: false, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.2 }}
       >
         <color attach="background" args={['#000205']} />
         <fog attach="fog" args={['#000205', 5, 30]} />
