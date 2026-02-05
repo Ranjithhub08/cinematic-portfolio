@@ -1,0 +1,146 @@
+:root {
+  --void-bg: #000205;
+  --neon-cyan: #00f3ff;
+  --neon-magenta: #ff00aa;
+  --neon-blue: #0066ff;
+  --neon-green: #0aff00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  /* Custom cursor everywhere */
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--void-bg);
+  overflow: hidden;
+  /* Prevent native scroll interaction interfering with Drei ScrollControls */
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: exclusion;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+    height 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+    background-color 0.3s;
+}
+
+.cursor.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 243, 255, 0.1);
+  border-color: var(--neon-magenta);
+}
+
+/* Loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--void-bg);
+  color: var(--neon-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  font-family: 'Orbitron';
+  letter-spacing: 4px;
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(0, 243, 255, 0.1);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes scan {
+  0% {
+    top: -10px;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+canvas {
+  touch-action: none;
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  perspective: 1000px;
+  /* Enable Z-axis depth */
+}
+
+.cert-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid #333;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cert-card ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.cert-card li {
+  margin-bottom: 0.5rem;
+  font-family: 'Rajdhani';
+  font-size: 1.1rem;
+  color: #ddd;
+}
