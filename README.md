@@ -1,16 +1,48 @@
-# React + Vite
+# 🚀 Cinematic 3D Portfolio | DevOps & Cloud Engineer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A fully immersive, interactive 3D web experience representing the world of a Cloud Architect. Built with React, Three.js, and Framer Motion.
 
-Currently, two official plugins are available:
+## 🌌 Overview
+This is not just a portfolio; it's a visual manifesto. Designed to break the mold of traditional 2D resume sites, this project uses a cinematic, "sci-fi" aesthetic to showcase technical skills in DevOps, Cloud Computing, and Automation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Demo:** [Link to your Vercel/Netlify deployment here]
 
-## React Compiler
+## ✨ Key Features
+-   **Immersive 3D Environment**: A deep-space void with atmospheric fog, moving stars, and floating particles.
+-   **Holographic Core Arsenal**: A rotating 3D ring system displaying core tech skills (Linux, AWS, Python, etc.) that orbits a central glowing nucleus.
+-   **Cinematic Typography**: Neon-styled, high-contrast typography using futuristic fonts (Orbitron, Rajdhani).
+-   **Interactive Timeline**: Scroll-driven storytelling that guides the user through the "Hero", "Tech Stack", and "Certifications" sections seamlessly.
+-   **Dynamic Animations**:
+    -   **Certifications**: "Deep Space" fly-in effects where cards arrive from the background one-by-one.
+    -   **Typing Effect**: Bio text types out line-by-line like a terminal.
+    -   **Living World**: Constant subtle motion in the background (stars, floating dust) to keep the scene alive.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+-   **Core**: [React](https://reactjs.org/) (Vite)
+-   **3D Engine**: [Three.js](https://threejs.org/) via [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+-   **3D Helpers**: [@react-three/drei](https://github.com/pmndrs/drei) (ScrollControls, Text, Float, Stars, Sparkles, Billboard)
+-   **Post-Processing**: [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing) (Bloom, Noise, Vignette, Chromatic Aberration)
+-   **UI Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Styling**: CSS Modules & Custom Variables
 
-## Expanding the ESLint configuration
+## 📸 Visuals
+-   **Colors**: Deep Void Black (`#000205`) with Neon Cyan (`#00f3ff`) and Magenta (`#ff00aa`) accents.
+-   **Vibe**: Cyberpunk, High-Tech, Minimalist, Cinematic.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/cinematic-portfolio.git
+    ```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+3.  **Run locally**
+    ```bash
+    npm run dev
+    ```
+
+## 📄 License
+MIT © Ranjith Kumar
