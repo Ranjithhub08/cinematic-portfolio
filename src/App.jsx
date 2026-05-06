@@ -1,10 +1,10 @@
-import React, { Suspense, useRef, useState, useEffect, useMemo } from 'react'
+import React, { Suspense, useRef, useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { ScrollControls, Scroll, useScroll, Sparkles, Float, Text, Stars, Billboard } from '@react-three/drei'
 import { EffectComposer, Bloom, Noise, ChromaticAberration, Vignette } from '@react-three/postprocessing'
 import { BlendFunction } from 'postprocessing'
 import * as THREE from 'three'
-import { motion } from 'framer-motion'
 import './index.css'
 
 // --- DATA ---
@@ -36,10 +36,10 @@ const CERTS = {
 
 const MovingStars = () => {
   const ref = useRef()
-  useFrame((state, delta) => {
+  useFrame((_state, _delta) => {
     if (ref.current) {
-      ref.current.rotation.y -= delta * 0.02
-      ref.current.rotation.x -= delta * 0.01
+      ref.current.rotation.y -= _delta * 0.02
+      ref.current.rotation.x -= _delta * 0.01
     }
   })
   return (
@@ -50,7 +50,7 @@ const MovingStars = () => {
 }
 
 
-const TechOrb = ({ text, subtitle, position, color, delay }) => {
+const TechOrb = ({ text, subtitle, position, color, _delay }) => {
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1} floatingRange={[-0.2, 0.2]}>
       <group position={position}>
@@ -96,7 +96,7 @@ const TechGalaxy = () => {
   const scroll = useScroll()
   const groupRef = useRef()
 
-  useFrame((state, delta) => {
+  useFrame((_state, _delta) => {
     if (!groupRef.current) return
     // Precise placement in the Page 3 "Spacer"
     // Core Arsenal Text ends at 0.40
@@ -111,7 +111,7 @@ const TechGalaxy = () => {
     groupRef.current.position.z = -25 + (r * 15)
 
     // Constant rotation
-    groupRef.current.rotation.y += delta * 0.5
+    groupRef.current.rotation.y += _delta * 0.5
   })
 
   return (
@@ -152,7 +152,7 @@ const CameraRig = () => {
   const { camera, mouse } = useThree()
   const scroll = useScroll()
 
-  useFrame((state, delta) => {
+  useFrame((_state, _delta) => {
     // Scroll Influence
     const s = scroll.offset
 
