@@ -1,8 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/cinematic-portfolio/', // Required for GitHub Pages deployment
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei', '@react-three/postprocessing'],
+          'motion-vendor': ['framer-motion', 'gsap'],
+          'postprocessing': ['postprocessing'],
+        }
+      }
+    }
+  }
 })
